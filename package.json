@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc",
+    "build": "cd ./crypto-sdk && npm i && npm run build && cd ../template-client-sdk && npm i && npm run build && cd ./ && npx tsc",
     "start": "node dist/index.js",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
     "migrate": "node-pg-migrate"
@@ -13,8 +13,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@questbook/reclaim-crypto-sdk": "justcharlz/back-reclaim-test/tree/main/crypto-sdk/",
-    "@questbook/template-client-sdk": "justcharlz/back-reclaim-test/tree/main/template-client-sdk/",
+    "@questbook/reclaim-crypto-sdk": "./crypto-sdk",
+    "@questbook/template-client-sdk": "./template-client-sdk",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",

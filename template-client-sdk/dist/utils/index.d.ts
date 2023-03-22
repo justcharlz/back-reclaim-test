@@ -1,1 +1,1 @@
-export declare function generateUuid(): any;
+export declare function generateUuid(): string;
