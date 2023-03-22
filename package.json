@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cd ./crypto-sdk && npm i && npm run build && cd ../template-client-sdk && npm i && npm run build && cd ./ && npx tsc",
+    "build": "cd ./crypto-sdk && npm i && cd ../template-client-sdk && npm i && cd ./ && npx tsc",
     "start": "node dist/index.js",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
     "migrate": "node-pg-migrate"
